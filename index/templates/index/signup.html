@@ -1,0 +1,22 @@
+{% load static %}
+<script src="https://kit.fontawesome.com/e7c15fdb77.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+  body {
+      background: black url("https://media.giphy.com/media/U3qYN8S0j3bpK/source.gif") repeat;
+      color: white
+  }
+
+</style>
+{% block content %}
+<div class = "container">
+  <br><br><br><br>
+  <h1>Sign up</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+</div>
+{% endblock %}

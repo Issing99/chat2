@@ -1,0 +1,31 @@
+{% extends 'friendcard/base.html' %}
+
+{% block content %}
+<style>
+
+  body {
+      height: 1800px;
+      background: linear-gradient(#0066cc 0%, #66b3ff 51%,  #99ccff 75%);
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 16px;
+      background-color: blue;
+      background-repeat: repeat;
+        }
+
+    p {
+      font-size: 20px;
+    }
+
+  h1 {
+    color: white;
+  }
+
+</style>
+  <div class="row">
+    <div class="col m-4">
+      {% include 'partials/card.html' %}
+
+      <a href="{% url 'card-list-page' %}">Back to List</a>
+    </div>
+  </div>
+{% endblock %}
